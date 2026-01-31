@@ -13,7 +13,7 @@
     "build": "npm run build:shared-types && npm run build --workspace=@sps/customer-system",
     "build:shared-types": "npm run build --workspace=@sps/shared-types",
     "build:all": "npm run build --workspaces",
-    "vercel-build": "npm run build:shared-types && npm run build --workspace=@sps/customer-system && cp -r packages/customer-system/dist/client ./dist",
+    "vercel-build": "npm run build:shared-types && npm run build --workspace=@sps/customer-system && mkdir -p dist api && cp -r packages/customer-system/dist/client/* ./dist/ && cp packages/customer-system/dist/server/index.js api/",
     "test": "npm run test --workspaces",
     "lint": "eslint packages/*/src --ext .ts,.tsx",
     "type-check": "tsc --noEmit --workspaces"
