@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "buildCommand": "npm run build:shared-types && npm run build --workspace=@sps/customer-system",
+  "buildCommand": "npm run build",
   "outputDirectory": "packages/customer-system/dist/client",
   "functions": {
     "packages/customer-system/dist/server/index.js": {
