@@ -1,7 +1,7 @@
 {
   "version": 2,
   "buildCommand": "npm run vercel-build",
-  "outputDirectory": "packages/customer-system/dist/client",
+  "outputDirectory": "dist",
   "functions": {
     "packages/customer-system/dist/server/index.js": {
       "runtime": "nodejs18.x"
@@ -14,7 +14,7 @@
     },
     {
       "src": "/(.*)",
-      "dest": "/packages/customer-system/dist/client/$1"
+      "dest": "/dist/$1"
     }
   ]
 }
