@@ -76,14 +76,6 @@ router.post('/:sessionId/upload', upload.single('file'), async (req, res) => {
     res.status(500).json(response);
   }
 });
-  } catch (error) {
-    const response: ApiResponse = {
-      success: false,
-      error: error instanceof Error ? error.message : 'File upload failed',
-    };
-    res.status(500).json(response);
-  }
-});
 
 // Get files for session
 router.get('/:sessionId', async (req, res) => {
