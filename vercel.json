@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "buildCommand": "npm run build",
+  "buildCommand": "./build.sh",
   "outputDirectory": "packages/customer-system/dist/client",
   "functions": {
     "packages/customer-system/dist/server/index.js": {

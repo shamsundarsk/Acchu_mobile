@@ -10,7 +10,7 @@
     "build:client": "vite build",
     "build:server": "tsc --project tsconfig.server.json",
     "start": "node dist/server/index.js",
-    "vercel-build": "npm run build",
+    "vercel-build": "npm run build --workspace=@sps/shared-types && npm run build",
     "test": "vitest --run",
     "test:watch": "vitest"
   },
