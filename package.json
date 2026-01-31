@@ -10,7 +10,9 @@
     "dev": "concurrently \"npm run dev:local-agent\" \"npm run dev:customer-system\"",
     "dev:local-agent": "npm run dev --workspace=@sps/local-agent",
     "dev:customer-system": "npm run dev --workspace=@sps/customer-system",
-    "build": "npm run build --workspaces",
+    "build": "npm run build:shared-types && npm run build --workspace=@sps/customer-system",
+    "build:shared-types": "npm run build --workspace=@sps/shared-types",
+    "build:all": "npm run build --workspaces",
     "test": "npm run test --workspaces",
     "lint": "eslint packages/*/src --ext .ts,.tsx",
     "type-check": "tsc --noEmit --workspaces"
