@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "buildCommand": "./build.sh",
+  "buildCommand": "npm run vercel-build",
   "outputDirectory": "packages/customer-system/dist/client",
   "functions": {
     "packages/customer-system/dist/server/index.js": {
